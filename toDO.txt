@@ -1,0 +1,8 @@
+KNN
+
+
+multiple regression
+
+
+decision trees & clustering
+
