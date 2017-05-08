@@ -1,0 +1,42 @@
+id,value,color
+NewYork,
+NewYork.Staten Island,
+NewYork.Staten Island.Driver Inattention/Distraction,13.256857,#D9F16C
+NewYork.Staten Island.Failure to Yield Right-of-Way,4.071071,#E0459C
+NewYork.Staten Island.Fatigued/Drowsy,3.306308,#5069FB
+NewYork.Staten Island.Backing Unsafely,2.693922,#F6949B
+NewYork.Staten Island.Other Vehicular,2.380542,#6DC3D6
+NewYork.Staten Island.Pavement Slippery,1.673279,#95CC2B
+NewYork.Staten Island.Prescription Medication,1.296648,#353941
+NewYork.Bronx,
+NewYork.Bronx.Driver Inattention/Distraction,12.102804,#9A40A8
+NewYork.Bronx.Other Vehicular,3.388866,#6BE579
+NewYork.Bronx.Failure to Yield Right-of-Way,3.254774,#AEA14D
+NewYork.Bronx.Backing Unsafely,2.983543,#926A18
+NewYork.Bronx.Fatigued/Drowsy,2.362861,#411BFB
+NewYork.Bronx.Prescription Medication,1.489232,#094818
+NewYork.Bronx.Turning Improperly,1.464852,#D3B3D6
+NewYork.Manhattan,
+NewYork.Manhattan.Driver Inattention/Distraction,14.632838,#122DE1
+NewYork.Manhattan.Other Vehicular,6.804772,#1E64D2
+NewYork.Manhattan.Fatigued/Drowsy,4.377509,#7033AC
+NewYork.Manhattan.Turning Improperly,4.051514,#477845
+NewYork.Manhattan.Failure to Yield Right-of-Way,3.945279,#133FE7
+NewYork.Manhattan.Lost Consciousness,3.304744,#70C0F5
+NewYork.Manhattan.Backing Unsafely,2.980310,#54D446
+NewYork.Queens,
+NewYork.Queens.Driver Inattention/Distraction,14.398226,#F30306
+NewYork.Queens.Failure to Yield Right-of-Way,6.245187,#F8FA33
+NewYork.Queens.Backing Unsafely,3.567725,#F9DD59
+NewYork.Queens.Fatigued/Drowsy,3.269430,#7A7ABA
+NewYork.Queens.Prescription Medication,1.609044,#A5B806
+NewYork.Queens.Lost Consciousness,1.532032,#9079D1
+NewYork.Queens.Other Vehicular,1.448345,#847889
+NewYork.Brooklyn,
+NewYork.Brooklyn.Driver Inattention/Distraction,10.214300,#1358BD
+NewYork.Brooklyn.Failure to Yield Right-of-Way,5.131097,#CACEA3
+NewYork.Brooklyn.Fatigued/Drowsy,3.408250,#D688AA
+NewYork.Brooklyn.Backing Unsafely,3.021186,#CB89B1
+NewYork.Brooklyn.Lost Consciousness,2.170865,#5C1EA4
+NewYork.Brooklyn.Other Vehicular,1.779448,#015A2F
+NewYork.Brooklyn.Prescription Medication,1.647524,#8B7D13
