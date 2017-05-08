@@ -67,13 +67,20 @@ text.big-text{
 </ul>
 <svg  xmlns="http://www.w3.org/2000/svg"> </svg>
  <div>Legend:<br> <font color="red">Red: Failure to Yield Right-of-Way </font> <br> <font color="blue"> Blue: Fatigued/Drowsy </font> <br> <font color="green"> Green: Driver Inattention/Distraction </font> <br> <font color="yellow">Yellow: Other Vehicular </font> </div>
- <button onclick="k2B()">knn 5</button>
- <button onclick="k3B()">knn 10</button>
- <button onclick="k4B()">knn 30</button>
+ <button onclick="k2B()">k2</button>
 
+ <button onclick="k4B()">k4</button>
+<button onclick="k5B()">k5</button>
+<button onclick="k6B()">k6</button>
+
+ <button onclick="bk2B()">bk2</button>
+
+ <button onclick="bk4B()">bk4</button>
+<button onclick="bk5B()">bk5</button>
+<button onclick="bk6B()">bk6</button>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
-var k2,k3,k4,k5,k6;
+var k2,k3,k4,k5,k6,bk2,bk4,bk5,bk6;
 var colors =  ["red", "blue", "green", "yellow", "#ff6600", "#00ffff" ];
 var circles;
 var width = 700,
@@ -164,7 +171,7 @@ var defs = svg.append("defs");
       .attr("xlink:href", "#land");
 
 
-d3.csv("5.csv", function(data) {
+d3.csv("ck2.csv", function(data) {
  circles = mapLayer.selectAll('circle')
 				      .data(data
 				      	)
@@ -185,23 +192,29 @@ d3.csv("5.csv", function(data) {
 
 }); //end of json loading
 
-d3.csv("10.csv", function(data) {k3=data});
-d3.csv("30.csv", function(data) {k4=data});
+d3.csv("ck3.csv", function(data) {k3=data});
+d3.csv("ck4.csv", function(data) {k4=data});
+d3.csv("ck5.csv", function(data) {k5=data});
+d3.csv("ck6.csv", function(data) {k6=data});
 
+d3.csv("bk2.csv", function(data) {bk2=data});
+d3.csv("bk4.csv", function(data) {bk4=data});
+d3.csv("bk5.csv", function(data) {bk5=data});
+d3.csv("bk6.csv", function(data) {bk6=data});
 
 function returnSize(i)
 {
 	if (i>=10)
 		return 10;
 	else
-		return 5 ;
+		return 4 ;
 }
 
 function returnStrokeSize(i)
 {
   if (i>=10)
     return 4;
-  return 0.1;
+  return 1;
 }
 
 function returnColor(i)
@@ -308,7 +321,28 @@ var FONTS = [
              function k4B(){
              	addPoints(k4);
              }
-           
+            function k5B(){
+              addPoints(k5);
+             }
+              function k6B(){
+              addPoints(k6);
+             }
 
+function bk2B()
+            {
 
+              addPoints(bk2);
+
+            }
+
+            
+             function bk4B(){
+              addPoints(bk4);
+             }
+            function bk5B(){
+              addPoints(bk5);
+             }
+              function bk6B(){
+              addPoints(bk6);
+             }
 </script>

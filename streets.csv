@@ -21,7 +21,6 @@ NewYork.Bronx.WHITE PLAINS ROAD               ,1.775701,#798205
 NewYork.Manhattan,
 NewYork.Manhattan.BROADWAY                        ,2.826165,#2E08BC
 NewYork.Manhattan.2 AVENUE                        ,2.290303,#DB39A3
-NewYork.Manhattan.                                ,1.620605,#71478D
 NewYork.Manhattan.3 AVENUE                        ,1.591964,#45F815
 NewYork.Manhattan.10 AVENUE                       ,1.526869,#1A5D32
 NewYork.Manhattan.1 AVENUE                        ,1.493019,#77B4D1
@@ -30,7 +29,6 @@ NewYork.Manhattan.5 AVENUE                        ,1.327417,#02CFFA
 NewYork.Manhattan.7 AVENUE                        ,1.265968,#7C5479
 NewYork.Queens,
 NewYork.Queens.NORTHERN BOULEVARD              ,3.156992,#89BE7E
-NewYork.Queens.                                ,2.645630,#102004
 NewYork.Queens.QUEENS BOULEVARD                ,2.375060,#2F9138
 NewYork.Queens.WOODHAVEN BOULEVARD             ,1.442184,#3ABFA2
 NewYork.Queens.HILLSIDE AVENUE                 ,1.436023,#F68D9A
@@ -40,7 +38,6 @@ NewYork.Queens.ROCKAWAY BOULEVARD              ,1.082280,#B3D036
 NewYork.Queens.FRANCIS LEWIS BOULEVARD         ,0.931336,#44DAEF
 NewYork.Brooklyn,
 NewYork.Brooklyn.ATLANTIC AVENUE                 ,3.033813,#7CB7DB
-NewYork.Brooklyn.                                ,2.308885,#9B9CC1
 NewYork.Brooklyn.FLATBUSH AVENUE                 ,2.134292,#654087
 NewYork.Brooklyn.LINDEN BOULEVARD                ,1.396738,#D05A43
 NewYork.Brooklyn.NOSTRAND AVENUE                 ,1.386724,#170873
