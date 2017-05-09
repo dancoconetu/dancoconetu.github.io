@@ -6,7 +6,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #x;
+    background-color: #333;
 }
 
 li {
@@ -60,19 +60,26 @@ text.big-text{
 <body  bgcolor="#C0C0C0" >
 <ul>
   <li><a class="active" href="./index.html">Introduction</a></li>
-    <li><a href="./knn.html">Knn</a></li>
-  <li><a href="./hoursdays.html">Hours Days</a></li>
+  <li><a href="./knn.html">Knn</a></li>
+  <li><a href="./cars.html">K clusters</a></li>
+  <li><a href="./hoursdays.html">Day Hour Heatmap</a></li>
   <li><a href="./contributing.html">Contributing</a></li>
   <li><a href="./streets.html">Streets</a></li>
-  <li><a href="./intersections.html">Intersections</a></li>
-</ul>
-<svg  xmlns="http://www.w3.org/2000/svg"> </svg>
- <div>Legend:<br> <font color="red">Red: Failure to Yield Right-of-Way </font> <br> <font color="blue"> Blue: Fatigued/Drowsy </font> <br> <font color="green"> Green: Driver Inattention/Distraction </font> <br> <font color="yellow">Yellow: Other Vehicular </font> </div>
- <button onclick="k2B()">k2</button>
 
- <button onclick="k4B()">k4</button>
-<button onclick="k5B()">k5</button>
-<button onclick="k6B()">k6</button>
+  <li><a href="/intersections.html">Intersections</a></li>
+</ul>
+
+<svg  xmlns="http://www.w3.org/2000/svg"> </svg>
+<div>Legend:<br> <font color="red">Red: Failure to Yield Right-of-Way </font> <br> <font color="blue"> Blue: Fatigued/Drowsy </font> <br> <font color="green"> Green: Driver Inattention/Distraction </font> <br> <font color="yellow">Yellow: Other Vehicular </font> </div>
+<button onclick="k2B()">knn 5</button>
+<button onclick="k3B()">knn 10</button>
+<button onclick="k4B()">knn 30</button>
+
+<div>
+KNN is an non parametric algorithm, which means that it does not make any assumptions on the underlying data distribution. We are given some data points for training and also a new unlabelled data for testing.
+The algorithm has different behavior based on k.In our case, we are using k = 5,10,30.
+</div>
+
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 var k2,k3,k4,k5,k6;
@@ -166,7 +173,7 @@ var defs = svg.append("defs");
       .attr("xlink:href", "#land");
 
 
-d3.csv("bk2.csv", function(data) {
+d3.csv("5.csv", function(data) {
  circles = mapLayer.selectAll('circle')
 				      .data(data
 				      	)
@@ -187,10 +194,8 @@ d3.csv("bk2.csv", function(data) {
 
 }); //end of json loading
 
-d3.csv("bk3.csv", function(data) {k3=data});
-d3.csv("bk4.csv", function(data) {k4=data});
-d3.csv("bk5.csv", function(data) {k5=data});
-d3.csv("bk6.csv", function(data) {k6=data});
+d3.csv("10.csv", function(data) {k3=data});
+d3.csv("30.csv", function(data) {k4=data});
 
 
 function returnSize(i)
@@ -198,14 +203,14 @@ function returnSize(i)
 	if (i>=10)
 		return 10;
 	else
-		return 4 ;
+		return 5 ;
 }
 
 function returnStrokeSize(i)
 {
   if (i>=10)
     return 4;
-  return 1;
+  return 0.1;
 }
 
 function returnColor(i)
@@ -297,6 +302,8 @@ var FONTS = [
 
   }
 
+
+
  function k2B()
             {
 
@@ -310,12 +317,7 @@ var FONTS = [
              function k4B(){
              	addPoints(k4);
              }
-            function k5B(){
-              addPoints(k5);
-             }
-              function k6B(){
-              addPoints(k6);
-             }
+
 
 
 </script>
