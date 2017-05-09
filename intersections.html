@@ -34,8 +34,8 @@ li a:hover {
 <body bgcolor="#C0C0C0">
   <ul>
   <li><a class="active" href="./index.html">Introduction</a></li>
-    <li><a href="./knn.html">Knn</a></li>
-  <li><a href="./cars.html">K clusters</a></li>
+  <li><a href="./knn.html">KNN</a></li>
+  <li><a href="./cars.html">K Clusters</a></li>
   <li><a href="./hoursdays.html">Day Hour Heatmap</a></li>
   <li><a href="./contributing.html">Contributing</a></li>
   <li><a href="./streets.html">Streets</a></li>
@@ -45,7 +45,6 @@ li a:hover {
 <!-- load the d3.js library -->
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
-
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
@@ -186,17 +185,6 @@ d3.csv("intersections.csv", function(error, data) {
       .attr("class", "line")
       .style("stroke", "orange")
       .attr("d", valueline8);
- //       svg.append("path")
- //      .data([data])
- //      .attr("class", "line")
- //      .style("stroke", "green")
- //      .attr("d", valueline9);
- //       svg.append("path")
- //      .data([data])
- //      .attr("class", "line")
- //      .style("stroke", "lightBlue")
- //      .attr("d", valueline10);
-
   // Add the X Axis
   svg.append("g")
       .attr("transform", "translate(0," + height + ")")
@@ -350,10 +338,5 @@ legend.append("text")
   .attr("dy", ".35em")
   .style("text-anchor", "end")
   .text(intersection8s);
-
-
-
-
-
 </script>
 </body>

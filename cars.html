@@ -60,26 +60,37 @@ text.big-text{
 <body  bgcolor="#C0C0C0" >
 <ul>
   <li><a class="active" href="./index.html">Introduction</a></li>
-    <li><a href="./knn.html">Knn</a></li>
-  <li><a href="./cars.html">K clusters</a></li>
+  <li><a href="./knn.html">KNN</a></li>
+  <li><a href="./cars.html">K Clusters</a></li>
   <li><a href="./hoursdays.html">Day Hour Heatmap</a></li>
   <li><a href="./contributing.html">Contributing</a></li>
   <li><a href="./streets.html">Streets</a></li>
   <li><a href="./intersections.html">Intersections</a></li>
 </ul>
+<h1 align="center">K Clusters</h1>
+<div>
+  K clusters for k=2-6 showing for the vehicle type of Passenger Vehicles and the bicycles and also KNN for different factors.
+  <br>
+  For the type of the Passenger Vehicles within the April of 2017, there are k2-k6.
+  <br>
+  For the type of the bicycles from 2012, there are bk2-bk6.
+  <br>
+  And we can see that the number of vehicle collisions of passenger vehicles happened in only one month are way (at least 5 times) more than the ones for bicycles from 2012 for entire five and half years.
+</div>
+<div><br></div>
+<div align="center">
 <svg  xmlns="http://www.w3.org/2000/svg"> </svg>
-
- <button onclick="k2B()">k2</button>
-
- <button onclick="k4B()">k4</button>
+</div>
+<div align="center">
+<button onclick="k2B()">k2</button>
+<button onclick="k4B()">k4</button>
 <button onclick="k5B()">k5</button>
 <button onclick="k6B()">k6</button>
-
- <button onclick="bk2B()">bk2</button>
-
- <button onclick="bk4B()">bk4</button>
+<button onclick="bk2B()">bk2</button>
+<button onclick="bk4B()">bk4</button>
 <button onclick="bk5B()">bk5</button>
 <button onclick="bk6B()">bk6</button>
+</div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 var k2,k3,k4,k5,k6,bk2,bk4,bk5,bk6;

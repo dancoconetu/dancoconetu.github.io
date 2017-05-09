@@ -60,26 +60,31 @@ text.big-text{
 <body  bgcolor="#C0C0C0" >
 <ul>
   <li><a class="active" href="./index.html">Introduction</a></li>
-  <li><a href="./knn.html">Knn</a></li>
-  <li><a href="./cars.html">K clusters</a></li>
+  <li><a href="./knn.html">KNN</a></li>
+  <li><a href="./cars.html">K Clusters</a></li>
   <li><a href="./hoursdays.html">Day Hour Heatmap</a></li>
   <li><a href="./contributing.html">Contributing</a></li>
   <li><a href="./streets.html">Streets</a></li>
-
   <li><a href="/intersections.html">Intersections</a></li>
 </ul>
 
-<svg  xmlns="http://www.w3.org/2000/svg"> </svg>
-<div>Legend:<br> <font color="red">Red: Failure to Yield Right-of-Way </font> <br> <font color="blue"> Blue: Fatigued/Drowsy </font> <br> <font color="green"> Green: Driver Inattention/Distraction </font> <br> <font color="yellow">Yellow: Other Vehicular </font> </div>
-<button onclick="k2B()">knn 5</button>
-<button onclick="k3B()">knn 10</button>
-<button onclick="k4B()">knn 30</button>
-
+<h1 align="center">KNN</h1>
 <div>
 KNN is an non parametric algorithm, which means that it does not make any assumptions on the underlying data distribution. We are given some data points for training and also a new unlabelled data for testing.
+<br>
+We take different values for nearest neighbours to train our algorithm and from that we check the areas of which accidents are more common, like
+failure to yield to the right way for red or fatigued for blue, green for driver inattention and yellow for any other reasons.
 The algorithm has different behavior based on k.In our case, we are using k = 5,10,30.
 </div>
 
+<div><br></div>
+<div align="center">
+<svg  xmlns="http://www.w3.org/2000/svg"> </svg>
+<div>Legend:<br> <font color="red">Red: Failure to Yield Right-of-Way </font> <br> <font color="blue"> Blue: Fatigued/Drowsy </font> <br> <font color="green"> Green: Driver Inattention/Distraction </font> <br> <font color="yellow">Yellow: Other Vehicular </font> </div>
+<button onclick="k2B()">KNN 5</button>
+<button onclick="k3B()">KNN 10</button>
+<button onclick="k4B()">KNN 30</button>
+</div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 var k2,k3,k4,k5,k6;

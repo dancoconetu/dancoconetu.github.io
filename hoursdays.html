@@ -50,21 +50,35 @@ li a:hover {
   <body bgcolor="#C0C0C0">
   <ul>
   <li><a class="active" href="./index.html">Introduction</a></li>
-    <li><a href="./knn.html">Knn</a></li>
-  <li><a href="./cars.html">K clusters</a></li>
+    <li><a href="./knn.html">KNN</a></li>
+  <li><a href="./cars.html">K Clusters</a></li>
   <li><a href="./hoursdays.html">Day Hour Heatmap</a></li>
   <li><a href="./contributing.html">Contributing</a></li>
   <li><a href="./streets.html">Streets</a></li>
   <li><a href="./intersections.html">Intersections</a></li>
 
 </ul>
-    <div id="chart"></div>
-    <div id="dataset-picker">
-    </div>
-    <div>
-      Accidents can happen anytime anywhere. There is no particular gurantee an accident will happen at some point of the day definitely,
-      but even then we know that accidents are more common at certain hours of the day. 
-    </div>
+<h1 align="center">Heatmap of the Day VS Time of Accidents</h1>
+<div>
+  Accidents can happen anytime anywhere. There is no particular gurantee an accident will happen at some point of the day definitely,
+  but even then we know that accidents are more common at certain hours of the day. Since the major factors which we have considered for
+  crashes are for inattention-distraction, yield right of the way, fatigued, we can therefore compare between these major reasons of accidents
+  versus other accident reasons and finally with all the accidents, and at which point of the day and time these accidents happen.
+<br>
+  As can be easily understood driver inattention and distraction are the most  common in weekdays during 9am and 4pm. This is because of the rush
+  hour, there would be the highest amount of traffic at this point of time where people are trying to go reach work or school. Same can
+  be said for fatigued and drowsy where 4pm is the most common reason for the accident. This is due to most people probaably trying to reach
+  home after a long day at work or school.
+  Therefore these accidents are more common during the weekday or the weekend.
+<br>
+  As for the other accidents they happen and can happen at any point of the day regardless of weekend or weekday.
+</div>
+<div><br></div>
+<div align="center">
+<div id="chart"></div>
+  <div id="dataset-picker">
+</div>
+</div>
     <script type="text/javascript">
       var margin = { top: 50, right: 0, bottom: 100, left: 30 },
           width = 960 - margin.left - margin.right,

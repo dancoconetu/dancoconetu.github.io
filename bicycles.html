@@ -60,19 +60,31 @@ text.big-text{
 <body  bgcolor="#C0C0C0" >
 <ul>
   <li><a class="active" href="./index.html">Introduction</a></li>
-    <li><a href="./knn.html">Knn</a></li>
+  <li><a href="./knn.html">KNN</a></li>
   <li><a href="./hoursdays.html">Hours Days</a></li>
   <li><a href="./contributing.html">Contributing</a></li>
   <li><a href="./streets.html">Streets</a></li>
   <li><a href="./intersections.html">Intersections</a></li>
 </ul>
+<h1 align="center">K Clusters</h1>
+<div>
+  K clusters for k=2-6 showing for the vehicle type of Passenger Vehicles and the bicycles and also KNN for different factors.
+  <br>
+  For the type of the Passenger Vehicles within the April of 2017, there are k2-k6.
+  <br>
+  For the type of the bicycles from 2012, there are bk2-bk6.
+  <br>
+  And we can see that the number of vehicle collisions of passenger vehicles happened in only one month are way (at least 5 times) more than the ones for bicycles from 2012 for entire five and half years.
+</div>
+<div><br></div>
+<div align="center">
 <svg  xmlns="http://www.w3.org/2000/svg"> </svg>
- <div>Legend:<br> <font color="red">Red: Failure to Yield Right-of-Way </font> <br> <font color="blue"> Blue: Fatigued/Drowsy </font> <br> <font color="green"> Green: Driver Inattention/Distraction </font> <br> <font color="yellow">Yellow: Other Vehicular </font> </div>
- <button onclick="k2B()">k2</button>
-
- <button onclick="k4B()">k4</button>
+<div>Legend:<br> <font color="red">Red: Failure to Yield Right-of-Way </font> <br> <font color="blue"> Blue: Fatigued/Drowsy </font> <br> <font color="green"> Green: Driver Inattention/Distraction </font> <br> <font color="yellow">Yellow: Other Vehicular </font> </div>
+<button onclick="k2B()">k2</button>
+<button onclick="k4B()">k4</button>
 <button onclick="k5B()">k5</button>
 <button onclick="k6B()">k6</button>
+</div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 var k2,k3,k4,k5,k6;
