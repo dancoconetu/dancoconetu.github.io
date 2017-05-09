@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style> /* set the CSS */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+</style>
+<body bgcolor="#C0C0C0">
+  <ul>
+  <li><a class="active" href="/index.html">Knn</a></li>
+  <li><a href="/cars.html">K clusters</a></li>
+  <li><a href="/hoursdays.html">Day Hour Heatmap</a></li>
+  <li><a href="/contributing.html">Contributing</a></li>
+  <li><a href="/streets.html">Streets</a></li>
+  <li><a href="/intersections.html">Intersections</a></li>
+</ul>
+
+<!-- load the d3.js library -->    	
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+// set the dimensions and margins of the graph
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// parse the date / time
+var parseTime = d3.timeParse("%d-%b-%y");
+
+// set the ranges
+var x = d3.scaleTime().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
+var intersection1s = "WEST 42 STREET With 8 AVENUE";
+var intersection2s ="TILLARY STREET With FLATBUSH AVENUE EXTENSION";
+var intersection3s ="FLATBUSH AVENUE With GRAND ARMY PLAZA";
+var intersection4s =" EAST 59 STREET With 2 AVENUE ";
+var intersection5s ="QUEENS BOULEVARD With WOODHAVEN BOULEVARD ";
+var intersection6s ="ROCKAWAY BOULEVARD With BROOKVILLE BOULEVARD";
+var intersection7s ="BAY PARKWAY With SHORE PARKWAY";
+var intersection8s ="WEST FORDHAM ROAD With MAJOR DEEGAN EXPRESSWAY ";
+var intersection9s ="FLATBUSH AVENUE With SHORE PARKWAY";
+var intersection10s ="WEST 34 STREET With 7 AVENUE";
+// define the 1st line
+var valueline = d3.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.intersection1); });
+
+// define the 2nd line
+var valueline2 = d3.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.intersection2); });
+
+var valueline3 = d3.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.intersection3); });
+
+var valueline4 = d3.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.intersection4); });
+
+var valueline5 = d3.line()
+  .x(function(d) { return x(d.date); })
+  .y(function(d) { return y(d.intersection5); });
+var valueline6 = d3.line()
+.x(function(d) { return x(d.date); })
+.y(function(d) { return y(d.intersection6); });
+
+
+var valueline7 = d3.line()
+.x(function(d) { return x(d.date); })
+.y(function(d) { return y(d.intersection7); });
+
+var valueline8 = d3.line()
+.x(function(d) { return x(d.date); })
+.y(function(d) { return y(d.intersection8); });
+
+var valueline9 = d3.line()
+.x(function(d) { return x(d.date); })
+.y(function(d) { return y(d.intersection9); });
+
+var valueline10 = d3.line()
+.x(function(d) { return x(d.date); })
+.y(function(d) { return y(d.intersection10); });
+
+
+// append the svg obgect to the body of the page
+// appends a 'group' element to 'svg'
+// moves the 'group' element to the top left margin
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+d3.csv("intersections.csv", function(error, data) {
+  if (error) throw error;
+
+  // format the data
+  data.forEach(function(d) {
+      d.date = parseTime(d.date);
+      d.intersection1 = +d.intersection1;
+      d.intersection2 = +d.intersection2;
+      d.intersection3 = +d.intersection3;
+      d.intersection4 = +d.intersection4;
+      d.intersection5 = +d.intersection5;
+      d.intersection6 = +d.intersection6;
+      d.intersection7 = +d.intersection7;
+      d.intersection8 = +d.intersection8;
+      d.intersection9 = +d.intersection9;
+      d.intersection10 = +d.intersection10;
+  });
+
+  // Scale the range of the data
+  x.domain(d3.extent(data, function(d) { return d.date; }));
+  y.domain([0, 150]);
+
+  // Add the valueline path.
+  svg.append("path")
+      .data([data])
+      .attr("class", "line")
+       .style("stroke", "purple")
+      .attr("d", valueline);
+
+  // Add the valueline2 path.
+  svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "red")
+      .attr("d", valueline2);
+  svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "blue")
+      .attr("d", valueline3);
+ svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "pink")
+      .attr("d", valueline4);
+ svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "black")
+      .attr("d", valueline5);
+ svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "yellow")
+      .attr("d", valueline6);
+ svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "green")
+      .attr("d", valueline7);
+ svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "orange")
+      .attr("d", valueline8);
+ //       svg.append("path")
+ //      .data([data])
+ //      .attr("class", "line")
+ //      .style("stroke", "green")
+ //      .attr("d", valueline9);
+ //       svg.append("path")
+ //      .data([data])
+ //      .attr("class", "line")
+ //      .style("stroke", "lightBlue")
+ //      .attr("d", valueline10);
+
+  // Add the X Axis
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // Add the Y Axis
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+});
+
+var legend = svg.selectAll("g")
+      .data(["Hi", "Hello"])
+      .enter().append("g")
+      .attr("class", "legend");
+
+    // draw legend colored rectangles
+    legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", 'purple');
+
+    // draw legend text
+    legend.append("text")
+      .style("font", "14px open-sans")
+      .attr("x", width - 24)
+      .attr("y", 0)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(intersection1s);
+
+    legend.append("rect")
+  .attr("x", width - 18)
+  .attr("y", 18)
+  .attr("width", 18)
+  .attr("height", 18)
+  .style("fill", "red");
+
+// draw legend text
+legend.append("text")
+  .style("font", "14px open-sans")
+  .attr("x", width - 24)
+  .attr("y", 18)
+  .attr("dy", ".35em")
+  .style("text-anchor", "end")
+  .text(intersection2s);
+
+
+legend.append("rect")
+  .attr("x", width - 18)
+  .attr("y", 36)
+  .attr("width", 18)
+  .attr("height", 18)
+  .style("fill", "blue");
+
+// draw legend text
+legend.append("text")
+  .style("font", "14px open-sans")
+  .attr("x", width - 24)
+  .attr("y", 36)
+  .attr("dy", ".35em")
+  .style("text-anchor", "end")
+  .text(intersection3s);
+
+  
+  
+  
+legend.append("rect")
+  .attr("x", width - 18)
+  .attr("y", 54)
+  .attr("width", 18)
+  .attr("height", 18)
+  .style("fill", "pink");
+
+// draw legend text
+legend.append("text")
+  .style("font", "14px open-sans")
+  .attr("x", width - 24)
+  .attr("y", 54)
+  .attr("dy", ".35em")
+  .style("text-anchor", "end")
+  .text(intersection4s);
+  
+  
+  legend.append("rect")
+  .attr("x", width - 18)
+  .attr("y", 72)
+  .attr("width", 18)
+  .attr("height", 18)
+  .style("fill", "black");
+
+// draw legend text
+legend.append("text")
+  .style("font", "14px open-sans")
+  .attr("x", width - 24)
+  .attr("y", 72)
+  .attr("dy", ".35em")
+  .style("text-anchor", "end")
+  .text(intersection5s);
+    
+  
+    legend.append("rect")
+  .attr("x", width - 18)
+  .attr("y", 90)
+  .attr("width", 18)
+  .attr("height", 18)
+  .style("fill", "yellow");
+
+// draw legend text
+legend.append("text")
+  .style("font", "14px open-sans")
+  .attr("x", width - 24)
+  .attr("y", 90)
+  .attr("dy", ".35em")
+  .style("text-anchor", "end")
+  .text(intersection6s);
+  
+  
+    
+    legend.append("rect")
+  .attr("x", width - 18)
+  .attr("y", 108)
+  .attr("width", 18)
+  .attr("height", 18)
+  .style("fill", "green");
+
+// draw legend text
+legend.append("text")
+  .style("font", "14px open-sans")
+  .attr("x", width - 24)
+  .attr("y", 108)
+  .attr("dy", ".35em")
+  .style("text-anchor", "end")
+  .text(intersection7s);
+  
+    
+    
+    legend.append("rect")
+  .attr("x", width - 18)
+  .attr("y", 126)
+  .attr("width", 18)
+  .attr("height", 18)
+  .style("fill", "orange");
+
+// draw legend text
+legend.append("text")
+  .style("font", "14px open-sans")
+  .attr("x", width - 24)
+  .attr("y", 126)
+  .attr("dy", ".35em")
+  .style("text-anchor", "end")
+  .text(intersection8s);
+  
+  
+  
+    
+  
+</script>
+</body>
