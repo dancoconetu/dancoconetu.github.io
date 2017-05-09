@@ -30,6 +30,10 @@ li a:hover {
   stroke-width: 2px;
 }
 
+div img{ display: inline-block;}
+
+.wrapper{  display: table; margin:0 auto 0 auto;}
+
 </style>
 <body bgcolor="#C0C0C0">
   <ul>
@@ -41,7 +45,33 @@ li a:hover {
   <li><a href="./streets.html">Streets</a></li>
   <li><a href="./intersections.html">Intersections</a></li>
 </ul>
+<h1 align = "center">Major Intersections which have Higher Accident Rates</h1>
+<div>
+  Intersections are another major accident prone area. Since there are multiple lanes and multiple major roads meeting at these points, they also tend to have
+  the highest amount of vehicles and traffic meeting and moving in these areas. Therefore they have a higher probability of an accident happening. This
+  can be correlated also with the Day Hour heatmap which we have made. During rush hours these intersections become jam packed and so have a higher potential
+  of accident happening.
+  <br><br>
+  Some of the accident prone intersections can be seen in the following pictures:
+  <br><br>
+</div>
 
+<di class="wrapper">
+  <img src="canalst_inattention.jpg" height="300" width="350">
+  <img src="failure_bronx.jpg" height="300" width="350">
+  <img src="fatigued_queens.jpg" height="300" width="350">
+</di>
+
+<div>
+  <br><br>
+  These 3 images show three intersections of Canal Street, Bronx and Queens respectively which are areas where accidents are highly common.
+  <br><br>
+  In the following plot, we show the different intersections which are common for having major accidents and at the same time show the rise and fall of accidents
+  in the intersections from 2012 to 2016. A point to note is that the intersection of the West 42 street with 8th Avenue which has the highest rate of accidents
+  in 2012 has slowly decreased over the years and in fact as of 2016 it seems to have reduced the number of accidents to a lower tier for a busy intersection. This
+  could be possible due to proper planning, more driving awareness or a better traffic infrastructure. This basically shows that with proper response vehicle accidents
+  can be reduced to a manageable level.
+</div>
 <!-- load the d3.js library -->
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
