@@ -59,10 +59,11 @@ text.big-text{
 </style>
 <body  bgcolor="#C0C0C0" >
 <ul>
-  <li><a class="active" href="/index.html">Knn</a></li>
-  <li><a href="/hoursdays.html">Hours Days</a></li>
-  <li><a href="/contributing.html">Contributing</a></li>
-  <li><a href="/streets.html">Streets</a></li>
+  <li><a class="active" href="./index.html">Knn</a></li>
+  <li><a href="./hoursdays.html">Hours Days</a></li>
+  <li><a href="./contributing.html">Contributing</a></li>
+  <li><a href="./streets.html">Streets</a></li>
+  <li><a href="./intersections.html">Intersections</a></li>
 </ul>
 <svg  xmlns="http://www.w3.org/2000/svg"> </svg>
  <div>Legend:<br> <font color="red">Red: Failure to Yield Right-of-Way </font> <br> <font color="blue"> Blue: Fatigued/Drowsy </font> <br> <font color="green"> Green: Driver Inattention/Distraction </font> <br> <font color="yellow">Yellow: Other Vehicular </font> </div>
@@ -180,7 +181,7 @@ d3.csv("bk2.csv", function(data) {
 				      .attr('fill', function (d) {  return returnColor(parseInt(d.type))})
 				      			k2 = data;
 				  }); //end of csv loading
-			
+
 
 
 }); //end of json loading
@@ -273,7 +274,7 @@ var FONTS = [
   "Old StandardTT",
   "Droid+Sans",
   "Lobster",
-  
+
 ];
 
 
@@ -292,10 +293,8 @@ var FONTS = [
 				      .attr('stroke-width',function (d) {  return returnStrokeSize(parseInt(d.type))})
 				      .attr('fill', function (d) {  return returnColor(parseInt(d.type))});
 
-				  
+
   }
-
-
 
  function k2B()
             {

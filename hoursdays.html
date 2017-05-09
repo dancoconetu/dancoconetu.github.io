@@ -28,7 +28,7 @@ li a:hover {
 }
       rect.bordered {
         stroke: #E6E6E6;
-        stroke-width:2px;   
+        stroke-width:2px;
       }
 
       text.mono {
@@ -49,14 +49,13 @@ li a:hover {
   </head>
   <body bgcolor="#C0C0C0">
   <ul>
-  <li><a class="active" href="/index.html">Knn</a></li>
-  <li><a href="/cars.html">K clusters</a></li>
-  <li><a href="/hoursdays.html">Day Hour Heatmap</a></li>
-  <li><a href="/contributing.html">Contributing</a></li>
-  <li><a href="/streets.html">Streets</a></li>
+  <li><a class="active" href="./index.html">Knn</a></li>
+  <li><a href="./cars.html">K clusters</a></li>
+  <li><a href="./hoursdays.html">Day Hour Heatmap</a></li>
+  <li><a href="./contributing.html">Contributing</a></li>
+  <li><a href="./streets.html">Streets</a></li>
+  <li><a href="./intersections.html">Intersections</a></li>
 
-  <li><a href="/intersections.html">Intersections</a></li>
-  
 </ul>
     <div id="chart"></div>
     <div id="dataset-picker">
@@ -69,7 +68,7 @@ li a:hover {
           legendElementWidth = gridSize*2,
           buckets = 9,
           colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], // alternatively colorbrewer.YlGnBu[9]
-          
+
 //colors = ["#FFFFFA","#FFE1E0","#FFC3C6","#FFA5AC","#FF8792","#FF6978","#FF4B5E","#FF2D44","#FF0F2B"],
 
           days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
@@ -135,7 +134,7 @@ li a:hover {
               .style("fill", function(d) { return colorScale(d.value); });
 
           cards.select("title").text(function(d) { return d.value; });
-          
+
           cards.exit().remove();
 
           var legend = svg.selectAll(".legend")
@@ -159,11 +158,11 @@ li a:hover {
 
           legend.exit().remove();
 
-        });  
+        });
       };
 
       heatmapChart(datasets[0]);
-      
+
       var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
         .data(datasets);
 
