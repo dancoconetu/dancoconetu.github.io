@@ -1,0 +1,47 @@
+id,value,color
+NewYork,
+NewYork.Staten Island,
+NewYork.Staten Island.HYLAN BOULEVARD                 ,9.476166,#CCA664
+NewYork.Staten Island.RICHMOND ROAD                   ,4.073946,#F27AC6
+NewYork.Staten Island.AMBOY ROAD                      ,3.366684,#731B50
+NewYork.Staten Island.VICTORY BOULEVARD               ,3.090679,#0405FD
+NewYork.Staten Island.RICHMOND AVENUE                 ,2.938301,#C86A4F
+NewYork.Staten Island.ARTHUR KILL ROAD                ,2.616296,#CC0628
+NewYork.Staten Island.CLOVE ROAD                      ,2.228164,#E1C2A5
+NewYork.Staten Island.FOREST AVENUE                   ,2.058536,#8C24B7
+NewYork.Bronx,
+NewYork.Bronx.EAST TREMONT AVENUE             ,2.430922,#53DB25
+NewYork.Bronx.BRUCKNER BOULEVARD              ,2.386225,#EDBA5D
+NewYork.Bronx.JEROME AVENUE                   ,2.346607,#0574DF
+NewYork.Bronx.WESTCHESTER AVENUE              ,2.087566,#0404C3
+NewYork.Bronx.BOSTON ROAD                     ,1.965664,#0CA544
+NewYork.Bronx.GRAND CONCOURSE                 ,1.821414,#B8E1DF
+NewYork.Bronx.WEBSTER AVENUE                  ,1.799065,#3CC94C
+NewYork.Bronx.WHITE PLAINS ROAD               ,1.775701,#798205
+NewYork.Manhattan,
+NewYork.Manhattan.BROADWAY                        ,2.826165,#2E08BC
+NewYork.Manhattan.2 AVENUE                        ,2.290303,#DB39A3
+NewYork.Manhattan.3 AVENUE                        ,1.591964,#45F815
+NewYork.Manhattan.10 AVENUE                       ,1.526869,#1A5D32
+NewYork.Manhattan.1 AVENUE                        ,1.493019,#77B4D1
+NewYork.Manhattan.8 AVENUE                        ,1.348769,#DEB892
+NewYork.Manhattan.5 AVENUE                        ,1.327417,#02CFFA
+NewYork.Manhattan.7 AVENUE                        ,1.265968,#7C5479
+NewYork.Queens,
+NewYork.Queens.NORTHERN BOULEVARD              ,3.156992,#89BE7E
+NewYork.Queens.QUEENS BOULEVARD                ,2.375060,#2F9138
+NewYork.Queens.WOODHAVEN BOULEVARD             ,1.442184,#3ABFA2
+NewYork.Queens.HILLSIDE AVENUE                 ,1.436023,#F68D9A
+NewYork.Queens.JAMAICA AVENUE                  ,1.236818,#B05BA9
+NewYork.Queens.NORTH CONDUIT AVENUE            ,1.103330,#F8353E
+NewYork.Queens.ROCKAWAY BOULEVARD              ,1.082280,#B3D036
+NewYork.Queens.FRANCIS LEWIS BOULEVARD         ,0.931336,#44DAEF
+NewYork.Brooklyn,
+NewYork.Brooklyn.ATLANTIC AVENUE                 ,3.033813,#7CB7DB
+NewYork.Brooklyn.FLATBUSH AVENUE                 ,2.134292,#654087
+NewYork.Brooklyn.LINDEN BOULEVARD                ,1.396738,#D05A43
+NewYork.Brooklyn.NOSTRAND AVENUE                 ,1.386724,#170873
+NewYork.Brooklyn.BEDFORD AVENUE                  ,1.316626,#CACB33
+NewYork.Brooklyn.OCEAN PARKWAY                   ,1.259590,#B2C4E0
+NewYork.Brooklyn.EASTERN PARKWAY                 ,1.231289,#245F03
+NewYork.Brooklyn.UTICA AVENUE                    ,1.200376,#44BAD7
